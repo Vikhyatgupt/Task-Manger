@@ -1,0 +1,107 @@
+/* Page Layout */
+
+.page-container{
+    min-height:100vh;
+    width:100%;
+    padding:40px;
+    box-sizing:border-box;
+}
+
+/* Title */
+h1{
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+/* Search Bar */
+.search-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.search-container input{
+    padding: 10px;
+    width: 250px;
+    border-radius: 6px;
+    border: none;
+}
+
+.search-container button{
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+/* Cards Layout */
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr); /* 3 cards per row */
+    gap: 25px;
+}
+
+/* Card Design */
+.task-card{
+    background: rgba(255,255,255,0.08);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.task-card button{
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+/* Tablet */
+@media (max-width:1000px){
+
+    .card-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .search-container input{
+        width: 200px;
+    }
+
+}
+
+/* Mobile */
+@media (max-width:600px){
+
+    .page-container{
+        padding:20px;
+    }
+
+    .card-container{
+        grid-template-columns: 1fr;
+    }
+
+    .search-container{
+        flex-direction: column;
+    }
+
+    .search-container input{
+        width:100%;
+    }
+
+    .search-container button{
+        width:100%;
+    }
+
+}

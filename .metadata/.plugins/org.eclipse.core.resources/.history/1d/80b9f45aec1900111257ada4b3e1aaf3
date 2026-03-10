@@ -1,0 +1,21 @@
+package com.example.demo.services;
+
+import org.springframework.stereotype.Service;
+
+import com.example.demo.model.Task;
+
+@Service
+public interface BussinesLogic {
+	
+	abstract public void add(Task T) ;
+	
+	abstract public Task showAll() ;
+	
+	abstract public Task showById(int id);
+	
+	abstract public Task update(int id);
+	
+	abstract public Task delete(int id);
+	
+	
+}

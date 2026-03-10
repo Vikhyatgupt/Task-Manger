@@ -1,0 +1,93 @@
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body Background */
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg,#1f2937,#111827);
+    color:white;
+}
+
+/* Main Container */
+.container{
+    text-align:center;
+    background: rgba(255,255,255,0.05);
+    padding:60px 80px;
+    border-radius:12px;
+    backdrop-filter: blur(10px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* Title */
+.container h1{
+    font-size:48px;
+    margin-bottom:40px;
+    letter-spacing:1px;
+}
+
+/* Button container */
+.ADD{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+/* Buttons */
+.btn{
+    padding:12px 28px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    font-weight:600;
+    transition:all 0.3s ease;
+}
+
+/* Add Task Button */
+.add-btn{
+    background:#3b82f6;
+    color:white;
+}
+
+.add-btn:hover{
+    background:#2563eb;
+    transform:translateY(-2px);
+    box-shadow:0 5px 12px rgba(59,130,246,0.4);
+}
+
+/* Show Task Button */
+.show-btn{
+    background:#10b981;
+    color:white;
+}
+
+.show-btn:hover{
+    background:#059669;
+    transform:translateY(-2px);
+    box-shadow:0 5px 12px rgba(16,185,129,0.4);
+}
+
+/* Responsive */
+@media(max-width:600px){
+
+    .container{
+        padding:40px;
+    }
+
+    .container h1{
+        font-size:36px;
+    }
+
+    .ADD{
+        flex-direction:column;
+        gap:15px;
+    }
+}

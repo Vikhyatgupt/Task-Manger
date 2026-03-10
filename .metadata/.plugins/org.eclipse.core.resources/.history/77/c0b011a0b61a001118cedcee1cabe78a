@@ -1,0 +1,44 @@
+package com.example.demo.controler;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import com.example.demo.model.Task;
+import com.example.demo.services.BussinesLogic;
+
+@RestController
+@CrossOrigin(origins = "")
+public class Controller {
+	
+	@Autowired
+	BussinesLogic buss ;
+	
+	@PostMapping("/add")
+	public String add(@RequestBody Task T) {
+		return buss.add(T) ;
+	}
+	
+	@GetMapping("/getall")
+	public List<Task> showAll(){
+		return buss.showAll() ;
+	}
+	
+	@GetMapping("/getid/{id}")
+	public Optional<Task> getid(@PathVariable int id) {
+		return buss.showById(id);
+	}
+	
+	@PutMapping("/update/{id}")
+	public Task update(@RequestBody Task t , @PathVariable int id) {
+		return buss.update(id, t) ;
+	}
+	
+	@DeleteMapping("/delete/{id}")
+	public String delete(@PathVariable int id) {
+		return buss.delete(id);
+	}
+	
+}
